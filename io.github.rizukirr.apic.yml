@@ -1,6 +1,6 @@
 id: io.github.rizukirr.apic
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -19,7 +19,7 @@ modules:
     buildsystem: simple
     build-options:
       env:
-        CARGO_NET_OFFLINE: "true"
+        CARGO_NET_OFFLINE: 'true'
     build-commands:
       - cargo --offline build --release -p apic-gui
       - install -Dm755 target/release/apic-gui /app/bin/apic-gui
@@ -29,6 +29,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/rizukirr/apic.git
-        tag: v0.4.1
-        commit: f4b1cfda0fb791e3fe2094e528c147bd13e00bd4
+        tag: v0.5.0
+        commit: 754461d9e07a9858e7d0ff0c0e455941d7c7cd83
       - cargo-sources.json
